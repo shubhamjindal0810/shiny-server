@@ -1,0 +1,17 @@
+{
+    "contents" : "\n# This is the user-interface definition of a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\n\nshinyUI(fluidPage(\n  titlePanel(\"Uploading Files\"),\n  sidebarLayout(\n    sidebarPanel(\n      fileInput('file1', 'First:  Upload a .csv file',\n                accept = c(\n                  'text/csv',\n                  'text/comma-separated-values',\n                  'text/tab-separated-values',\n                  'text/plain',\n                  '.csv',\n                  '.tsv'\n                )\n      ),\n     # numericInput(\"n\", \"N:\", min = 0, max = 100, value = 50),\n      br(),\n      p(\"Second: Click on the below button and wait untill you see DONE \" ),\n      actionButton(\"begin\", \"Start Generating Stickers\"),\n      verbatimTextOutput(\"status\"),\n     p(\"Third: Once you see DONE, click on the DOWNLOAD button \" ),\n      downloadButton('downloadData', 'Download')\n    ),\n    mainPanel(\n      tableOutput('contents')\n      \n    )\n  )\n))\n",
+    "created" : 1442741993715.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3940790985",
+    "id" : "71A4D8F5",
+    "lastKnownWriteTime" : 1442758221,
+    "path" : "C:/Users/Shubham/Dropbox/Paymint/sticker/Amazon/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

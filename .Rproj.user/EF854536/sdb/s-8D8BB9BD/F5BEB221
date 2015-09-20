@@ -1,0 +1,16 @@
+{
+    "contents" : "import sys\nsys.path.insert(0,'/home/demo/shiny-server/')\n\nimport code128\ndef jindsh(data,name):\n  code=code128.code128_format(data)\n  img=code128.code128_image(code)\n  img.save(name)\n",
+    "created" : 1442769931542.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2795967987",
+    "id" : "F5BEB221",
+    "lastKnownWriteTime" : 1442770970,
+    "path" : "~/shiny-server/python.py",
+    "project_path" : "python.py",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "python"
+}

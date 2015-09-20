@@ -1,0 +1,17 @@
+{
+    "contents" : "\n# This is the user-interface definition of a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\n\nshinyUI(fluidPage(\n\n  # Application title\n  titlePanel(\"Paymint 1.0\"),\n\n  sidebarLayout(\n    sidebarPanel(\n      textInput(\"phoneNumber\",\n                  \"Phone Number:\",\n                  value = \"9789859748\")\n    ),\n\n    # Show a plot of the generated distribution\n    mainPanel(\n      imageOutput(\"qrcode\"),\n      h2(textOutput( \"name\" ) ),\n      h2( textOutput( \"credits\") ),\n      actionButton( \"addCredits\", \"Add Credits\")\n    )\n  )\n))",
+    "created" : 1442660266099.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "860776350",
+    "id" : "A3F5C9F0",
+    "lastKnownWriteTime" : 1442664539,
+    "path" : "C:/Users/Shubham/Dropbox/Paymint/paymint-1/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

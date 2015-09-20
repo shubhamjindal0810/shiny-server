@@ -1,0 +1,17 @@
+{
+    "contents" : "\n# This is the server logic for a Shiny web application.\n# You can find out more about building applications with Shiny here:\n#\n# http://shiny.rstudio.com\n#\n\nlibrary(shiny)\n\nshinyServer(function(input, output) {\n  \n  library( data.table )\n  data <- data.table( read.csv(\"data.csv\") )\n\n#  output$barcode <- renderPlot({\n\n #   library( rPython )\n#    library( png )\n#    pythonCode <- \"python.py\"\n#    pythonFunction <- \"jindsh\"\n #   tempImageName <- \"temp.png\"\n #   barcode <- input$phoneNumber\n #   code <- readChar( pythonCode, nchars = 100000 )\n #   python.exec( code )\n#    python.call( pythonFunction, barcode, tempImageName )\n#    img1 <- readPNG( tempImageName )\n #   plot( 1 : 2, type = 'n', yaxt = 'n', xaxt = 'n', ylab = '', xlab = '', bty = 'n' )\n#    rasterImage( img1, 0.94, 1.19, 2.06, 1.64 )\n\n#  })\n  \n  output$qrcode <- renderPlot({\n    \n    library( qrcode )\n    qrcode_gen( input$phoneNumber )\n    \n  })\n  \n  output$name <- renderText({ \n    format( data$name[ which( data$phoneNumber == input$phoneNumber) ] )\n  })\n  \n  output$emailID <- renderText({ \n    format( data$emailID[ which( data$phoneNumber == input$phoneNumber) ] )\n  })\n  \n  output$credits <- renderText({ \n    paste( format( data$credits[ which( data$phoneNumber == input$phoneNumber) ] ), \"credits\")\n  })\n  \n  \n\n\n})\n",
+    "created" : 1442660266508.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3905337347",
+    "id" : "640F3BDD",
+    "lastKnownWriteTime" : 1442664983,
+    "path" : "C:/Users/Shubham/Dropbox/Paymint/paymint-1/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
